@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estetica Vivians - Productos de alta calidad">
+    <title>ESTETICA VIVIANS</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link  rel= "icon"  type= "image/png"  sizes= "32x32"  href= imagenes/favicon/vivi.png > 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+  </head>
+<body>
+
+    <!-- ========================HEADER======================== -->
+    <header>
+        <h1>ESTETICA VIVIANS</h1>
+
+        <button class="hamburguesa" id="btnMenu" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="navMenu" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="html\cremas.html">Cremas</a></li>
+                <li><a href="html\perfumes.html">Perfumes</a></li>
+                <li><a href="html\maquillaje.html">Maquillaje</a></li>
+                <li><a href="html\contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ========================BIENVENIDA======================== -->
+        <section class="hero">
+            <h3>Bienvenida a la Tienda de</h3>
+            <h2>Estética Vivians</h2>
+            <p>Descubrí nuestra selección de cremas, perfumes y maquillaje de alta calidad. Productos pensados para realzar tu belleza natural.</p>
+            <!-- <a href="#categorias" class="btn-cta">Ver categorías</a> -->
+        </section>
+
+        <div class="container">
+
+            <!-- ========================CATEGORÍAS======================== -->
+            <section id="categorias">
+                <h2 class="seccion-titulo">Categorías</h2>
+                <div class="categorias">
+
+                    <a href="html/cremas.html" class="categoria-card">
+                        <img src="imagenes/cremas.jpg" alt="Cremas">
+                        <div class="categoria-info">
+                            <h3>Cremas</h3>
+                            <span>Ver productos →</span>
+                        </div>
+                    </a>
+
+                    <a href="html/perfumes.html" class="categoria-card">
+                        <img src="imagenes/perfumes.jpg" alt="Perfumes">
+                        <div class="categoria-info">
+                            <h3>Perfumes</h3>
+                            <span>Ver productos →</span>
+                        </div>
+                    </a>
+
+                    <a href="html/maquillaje.html" class="categoria-card">
+                        <img src="imagenes/maquillaje.jpg" alt="Maquillaje">
+                        <div class="categoria-info">
+                            <h3>Maquillaje</h3>
+                            <span>Ver productos →</span>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- ========================PRODUCTOS DESTACADOS======================== -->
+            <section class="productos-destacados">
+                <h2 class="seccion-titulo">Productos Destacados</h2>
+                <div class="galeria-destacados">
+
+                    <!-- Tarjeta 1 -->
+                    <div class="producto-card">
+                        <span class="badge">Destacado</span>
+                        <h3 class="producto-nombre">Crema Hidratante X</h3>
+                        <div class="producto-cuerpo">
+                            <img src="imagenes/cremas.jpg" alt="Crema Hidratante X">
+                            <p class="producto-descripcion">Crema hidratante de uso diario con vitamina E. Ideal para todo tipo de piel.</p>
+                        </div>
+                        <div class="producto-footer">
+                            <span class="producto-precio">$ 2.500</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesa%20la%20Crema%20Hidratante%20X" class="btn-whatsapp" target="_blank">Consultar</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="producto-card">
+                        <span class="badge">Destacado</span>
+                        <h3 class="producto-nombre">Perfume Floral Y</h3>
+                        <div class="producto-cuerpo">
+                            <img src="imagenes/perfumes.jpg" alt="Perfume Floral Y">
+                            <p class="producto-descripcion">Fragancia floral con notas de jazmín y rosa. Duración de 8 horas.</p>
+                        </div>
+                        <div class="producto-footer">
+                            <span class="producto-precio">$ 4.800</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesa%20el%20Perfume%20Floral%20Y" class="btn-whatsapp" target="_blank">Consultar</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="producto-card">
+                        <span class="badge">Destacado</span>
+                        <h3 class="producto-nombre">Labial Mate Z</h3>
+                        <div class="producto-cuerpo">
+                            <img src="imagenes/maquillaje.jpg" alt="Labial Mate Z">
+                            <p class="producto-descripcion">Labial de larga duración con acabado mate. Fórmula hidratante sin resequedad.</p>
+                        </div>
+                        <div class="producto-footer">
+                            <span class="producto-precio">$ 1.200</span>
+                            <a href="https://wa.me/5491112345678?text=Hola!%20Me%20interesa%20el%20Labial%20Mate%20Z" class="btn-whatsapp" target="_blank">Consultar</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ========================FOOTER======================== -->
+    <footer>
+        <p>&copy; 2025 <span>TIENDA VIVIANS</span>. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- ========================JS — Menú hamburguesa======================== -->
+    <script>
+        const btnMenu = document.getElementById('btnMenu');
+        const navMenu = document.getElementById('navMenu');
+
+        btnMenu.addEventListener('click', function() {
+            navMenu.classList.toggle('abierto');
+        });
+    </script>
+
+</body>
+</html>

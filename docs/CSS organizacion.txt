@@ -1,0 +1,15 @@
+estilo.css
+│
+├── CSS Variables       → colores y fuentes centralizados
+├── Reset               → limpia estilos del navegador
+├── Body                → footer siempre abajo
+├── Header + Nav        → barra de navegación
+├── Container           → centra el contenido
+├── Hero                → bienvenida (index)
+├── Títulos de sección  → línea dorada
+├── Categorías          → 3 tarjetas (index)
+├── Galería destacados  → 3 columnas (index)
+├── Galería categoría   → 2 columnas (cremas, perfumes, maquillaje)
+├── Tarjeta producto    → compartida en todas las páginas
+├── Footer              → siempre abajo
+└── Responsive          → tablet 768px + mobile 480px
