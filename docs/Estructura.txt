@@ -1,0 +1,33 @@
+estetica-vivians/
+│
+│
+├── css/
+│   └── estilo.css
+│
+├── js/
+│   └── main.js
+│
+├── imagenes/
+│   ├── bienvenida/             
+│   ├── tratamientos/
+│   ├── tienda/
+│   └── favicon/
+│
+├── videos/
+│
+├── html/
+│   ├── contacto.html
+│   ├── turnos.html
+│   │
+│   ├── tratamientos/
+│   │   ├── faciales.html
+│   │   ├── corporales.html
+│   │   └── depilacion.html
+│   │
+│   └── tienda/
+│       ├── index.html
+│       ├── cremas.html
+│       ├── perfumes.html
+│       └── maquillaje.html
+│
+└── index.html
