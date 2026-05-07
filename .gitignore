@@ -1,2 +1,7 @@
 automatizacion github
 bkp
+# Ignora todos los archivos .css dentro de la carpeta css/
+css/*.css
+
+# Pero NO ignores este archivo específico
+!css/estilo.css

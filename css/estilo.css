@@ -1,4 +1,8 @@
+/* ESTÉTICA VIVIANS — estilo.css
+   CSS unificado para todo el sitio */
 
+
+/* Fuente propia BrunoAceSC */
 @font-face {
     font-family: 'BrunoAceSC';
     src: url('../font/BrunoAceSC-Regular.ttf') format('truetype');
@@ -8,27 +12,24 @@
 }
 
 
-/* ========================
-   VARIABLES
-======================== */
+/* Variables globales
+   Cambiando un valor acá se actualiza en todo el sitio */
 :root {
-    --color-primario:   #2c3e50;   /* azul oscuro — header, footer, títulos  */
-    --color-acento:     #c9a96e;   /* dorado — detalles, hover, badges       */
-    --color-acento2:    #e8c98a;   /* dorado claro — hover de botones        */
-    --color-verde:      #25d366;   /* verde WhatsApp                         */
-    --color-texto:      #444;      /* color de texto general                 */
-    --color-fondo:      #faf9f7;   /* fondo general de la página             */
-    --color-fondo2:     #f0ebe1;   /* fondo alternativo para secciones       */
-    --color-borde:      #e8e0d5;   /* bordes suaves                          */
+    --color-primario:   #2c3e50;
+    --color-acento:     #c9a96e;
+    --color-acento2:    #e8c98a;
+    --color-verde:      #25d366;
+    --color-texto:      #444;
+    --color-fondo:      #faf9f7;
+    --color-fondo2:     #f0ebe1;
+    --color-borde:      #e8e0d5;
     --color-blanco:     #ffffff;
     --font-titulo:      'BrunoAceSC', serif;
     --font-cuerpo:      'Playfair Display', sans-serif;
 }
 
 
-/* ========================
-   RESET
-======================== */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -36,11 +37,8 @@
 }
 
 
-/* ========================
-   BODY
-   flex + min-height garantiza
-   que el footer siempre quede abajo.
-======================== */
+/* Body
+   flex + min-height garantiza que el footer siempre quede abajo */
 body {
     font-family: var(--font-cuerpo);
     background-color: var(--color-fondo);
@@ -55,9 +53,7 @@ main {
 }
 
 
-/* ============================================================
-   HEADER Y NAVEGACIÓN
-   ============================================================ */
+/* Header */
 header {
     background-color: var(--color-primario);
     padding: 0 40px;
@@ -71,7 +67,7 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo — index principal */
+/* Logo en index principal */
 .logo {
     font-family: var(--font-titulo);
     color: var(--color-acento);
@@ -80,7 +76,7 @@ header {
     text-decoration: none;
 }
 
-/* h1 en header — páginas de tienda */
+/* h1 en header de páginas internas */
 header h1 {
     font-family: var(--font-titulo);
     color: var(--color-acento);
@@ -88,9 +84,8 @@ header h1 {
     letter-spacing: 2px;
 }
 
-/* ========================
-   NAVEGACIÓN
-======================== */
+
+/* Navegación */
 nav ul {
     list-style: none;
     display: flex;
@@ -126,11 +121,9 @@ nav ul > li.tiene-submenu > a::after {
     opacity: 0.7;
 }
 
-/* ========================
-   SUBMENÚ DESPLEGABLE
-   100% CSS puro, sin JS.
-   Se activa con :hover en el li padre.
-======================== */
+
+/* Submenú desplegable
+   CSS puro, sin JS. Se activa con :hover en el li padre */
 .submenu {
     display: none;
     position: absolute;
@@ -185,11 +178,9 @@ nav ul > li:hover .submenu {
     transform: translateY(-1px);
 }
 
-/* ========================
-   MENÚ HAMBURGUESA
-   Solo visible en mobile.
-   Se activa con JS más adelante.
-======================== */
+
+/* Menú hamburguesa
+   Solo visible en mobile, se activa con JS más adelante */
 .hamburguesa {
     display: none;
     flex-direction: column;
@@ -209,9 +200,7 @@ nav ul > li:hover .submenu {
 }
 
 
-/* ============================================================
-   CONTAINER
-   ============================================================ */
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -220,9 +209,7 @@ nav ul > li:hover .submenu {
 }
 
 
-/* ============================================================
-   TÍTULOS DE SECCIÓN
-   ============================================================ */
+/* Títulos de sección con línea dorada */
 .seccion-titulo,
 .titulo-categoria {
     font-family: var(--font-titulo);
@@ -234,10 +221,8 @@ nav ul > li:hover .submenu {
 }
 
 
-/* ============================================================
-   HERO PRINCIPAL — index.html
-   Ocupa toda la pantalla con imagen de fondo.
-   ============================================================ */
+/* Hero principal — index.html
+   Ocupa toda la pantalla con imagen de fondo */
 .hero-principal {
     height: 100vh;
     position: relative;
@@ -311,6 +296,7 @@ nav ul > li:hover .submenu {
     flex-wrap: wrap;
 }
 
+/* Botón primario dorado */
 .btn-primario {
     display: inline-block;
     background-color: var(--color-acento);
@@ -331,6 +317,7 @@ nav ul > li:hover .submenu {
     transform: translateY(-2px);
 }
 
+/* Botón secundario con borde */
 .btn-secundario {
     display: inline-block;
     background-color: transparent;
@@ -370,10 +357,8 @@ nav ul > li:hover .submenu {
 }
 
 
-/* ============================================================
-   HERO SIMPLE — páginas internas
-   (tienda, tratamientos, contacto)
-   ============================================================ */
+/* Hero simple — páginas internas
+   usado en tienda, tratamientos, contacto */
 .hero {
     background: linear-gradient(135deg, var(--color-primario) 0%, #4a6275 100%);
     padding: 80px 40px;
@@ -417,9 +402,7 @@ nav ul > li:hover .submenu {
 }
 
 
-/* ============================================================
-   SECCIONES DEL INDEX PRINCIPAL
-   ============================================================ */
+/* Encabezado de sección con etiqueta, título y descripción */
 .seccion-header {
     display: flex;
     justify-content: space-between;
@@ -473,9 +456,8 @@ nav ul > li:hover .submenu {
 
 .btn-ver-mas:hover { opacity: 0.7; }
 
-/* ========================
-   TRATAMIENTOS — index
-======================== */
+
+/* Sección tratamientos en index */
 .seccion-tratamientos {
     background-color: var(--color-fondo2);
     padding: 80px 0;
@@ -487,6 +469,7 @@ nav ul > li:hover .submenu {
     gap: 30px;
 }
 
+/* Tarjeta de tratamiento en index */
 .tratamiento-card {
     background-color: var(--color-blanco);
     border-radius: 8px;
@@ -553,9 +536,8 @@ nav ul > li:hover .submenu {
 
 .tratamiento-card:hover .tratamiento-link { gap: 14px; }
 
-/* ========================
-   FRANJA CON FRASE — index
-======================== */
+
+/* Franja con frase — index */
 .franja-frase {
     background-color: var(--color-primario);
     padding: 70px 0;
@@ -575,9 +557,8 @@ nav ul > li:hover .submenu {
 
 .franja-frase blockquote span { color: var(--color-acento); }
 
-/* ========================
-   TIENDA — index
-======================== */
+
+/* Sección tienda en index */
 .seccion-tienda {
     background-color: var(--color-fondo);
     padding: 80px 0;
@@ -644,9 +625,7 @@ nav ul > li:hover .submenu {
 }
 
 
-/* ============================================================
-   CATEGORÍAS — tienda/index.html
-   ============================================================ */
+/* Categorías en tienda/index_tienda.html */
 .categorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -709,9 +688,7 @@ nav ul > li:hover .submenu {
 }
 
 
-/* ============================================================
-   PRODUCTOS
-   ============================================================ */
+/* Productos */
 .productos-destacados { margin-top: 60px; }
 
 .galeria-destacados {
@@ -726,6 +703,7 @@ nav ul > li:hover .submenu {
     gap: 20px;
 }
 
+/* Tarjeta de producto — compartida en tienda y destacados */
 .producto-card {
     border: 1px solid var(--color-borde);
     border-radius: 10px;
@@ -815,9 +793,172 @@ nav ul > li:hover .submenu {
 }
 
 
-/* ============================================================
-   CONTACTO
-   ============================================================ */
+/* Páginas de tratamientos — faciales, corporales, depilacion */
+
+.pagina-intro {
+    background-color: var(--color-fondo2);
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    border-left: 4px solid var(--color-acento);
+}
+
+.pagina-intro p {
+    font-size: 0.95rem;
+    color: var(--color-texto);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Lista de tratamientos en fila */
+.tratamiento-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Cada tratamiento en 3 columnas: imagen | info | botones */
+.tratamiento-item {
+    display: grid;
+    grid-template-columns: 220px 1fr auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--color-borde);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.tratamiento-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+/* Columna izquierda — imagen */
+.tratamiento-item-imagen {
+    width: 220px;
+    min-height: 180px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.tratamiento-item-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.tratamiento-item:hover .tratamiento-item-imagen img {
+    transform: scale(1.05);
+}
+
+/* Columna central — info */
+.tratamiento-item-info {
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border-left: 1px solid var(--color-borde);
+    border-right: 1px solid var(--color-borde);
+}
+
+.tratamiento-item-info h2 {
+    font-family: var(--font-titulo);
+    font-size: 1.2rem;
+    color: var(--color-primario);
+    letter-spacing: 1px;
+}
+
+.tratamiento-item-info p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.tratamiento-item-precio {
+    font-family: var(--font-titulo);
+    font-size: 1.2rem;
+    color: var(--color-acento);
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.tratamiento-duracion {
+    font-size: 0.8rem;
+    color: #999;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Columna derecha — botones */
+.tratamiento-item-acciones {
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+    background-color: var(--color-fondo);
+}
+
+/* Botón agendar turno vía WhatsApp */
+.btn-agendar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--color-verde);
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: var(--font-cuerpo);
+}
+
+.btn-agendar:hover {
+    background-color: #1ebe57;
+    transform: translateY(-2px);
+}
+
+/* Botón voucher — deshabilitado visualmente hasta implementarlo */
+.btn-voucher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: transparent;
+    color: #bbb;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    border: 1px dashed #ddd;
+    cursor: not-allowed;
+    font-family: var(--font-cuerpo);
+}
+
+.btn-voucher span {
+    font-size: 0.7rem;
+    display: block;
+    font-weight: 400;
+    margin-top: 2px;
+    color: #ccc;
+}
+
+
+/* Contacto */
 .contacto-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -905,7 +1046,7 @@ nav ul > li:hover .submenu {
 .dato-icono {
     width: 45px;
     height: 45px;
-    background-color: var(--color-primario);
+    /*background-color: var(--color-primario);*/
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -967,7 +1108,7 @@ nav ul > li:hover .submenu {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background-color: var(--color-primario);
+    /*background-color: var(--color-primario);*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -979,7 +1120,7 @@ nav ul > li:hover .submenu {
 
 .red-social:hover {
     font-size: 1.6rem;
-    background-color: var(--color-acento);
+    /*background-color: var(--color-acento);*/
 }
 
 .mapa-container {
@@ -1009,9 +1150,8 @@ nav ul > li:hover .submenu {
 }
 
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* Footer
+   Siempre pegado abajo gracias al flex del body y flex:1 del main */
 footer {
     background-color: var(--color-primario);
     color: #aaa;
@@ -1019,15 +1159,13 @@ footer {
     padding: 25px 20px;
     font-size: 0.85rem;
     font-weight: 300;
-    border-top: 1px solid rgba(201, 169, 110, 0.2);
+   /* border-top: 1px solid rgba(201, 169, 110, 0.2);*/
 }
 
 footer span { color: var(--color-acento); }
 
 
-/* ============================================================
-   RESPONSIVE — TABLET 768px
-   ============================================================ */
+/* Responsive tablet — 768px */
 @media (max-width: 768px) {
 
     header { padding: 0 20px; }
@@ -1098,26 +1236,46 @@ footer span { color: var(--color-acento); }
 
     section { padding: 60px 0; }
     .seccion-tratamientos,
-    .seccion-tienda       { padding: 60px 0; }
+    .seccion-tienda { padding: 60px 0; }
+
+    /* Tratamiento item en tablet — apila verticalmente */
+    .tratamiento-item {
+        grid-template-columns: 1fr;
+    }
+
+    .tratamiento-item-imagen {
+        width: 100%;
+        height: 200px;
+    }
+
+    .tratamiento-item-info {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid var(--color-borde);
+        border-bottom: 1px solid var(--color-borde);
+    }
+
+    .tratamiento-item-acciones {
+        flex-direction: row;
+        padding: 20px;
+    }
 }
 
 
-/* ============================================================
-   RESPONSIVE — MOBILE 480px
-   ============================================================ */
+/* Responsive mobile — 480px */
 @media (max-width: 480px) {
 
-    .hero-titulo          { font-size: 2.2rem; }
-    .hero-descripcion     { font-size: 0.9rem; }
-    .hero                 { padding: 50px 20px; }
-    .hero h2              { font-size: 1.6rem; }
-    .seccion-titulo-grande{ font-size: 1.8rem; }
+    .hero-titulo           { font-size: 2.2rem; }
+    .hero-descripcion      { font-size: 0.9rem; }
+    .hero                  { padding: 50px 20px; }
+    .hero h2               { font-size: 1.6rem; }
+    .seccion-titulo-grande { font-size: 1.8rem; }
 
-    .categorias           { grid-template-columns: 1fr; }
-    .galeria-destacados   { grid-template-columns: 1fr; }
-    .tienda-grid          { grid-template-columns: 1fr; }
+    .categorias            { grid-template-columns: 1fr; }
+    .galeria-destacados    { grid-template-columns: 1fr; }
+    .tienda-grid           { grid-template-columns: 1fr; }
 
-    .producto-cuerpo      { flex-direction: column; }
+    .producto-cuerpo       { flex-direction: column; }
 
     .producto-cuerpo img {
         width: 100%;
@@ -1135,10 +1293,16 @@ footer span { color: var(--color-acento); }
         text-align: center;
     }
 
-    .mapa-container       { height: 250px; }
+    .mapa-container        { height: 250px; }
 
     .franja-frase blockquote {
         font-size: 1.2rem;
         padding: 0 20px;
+    }
+
+    .pagina-intro          { padding: 25px; }
+
+    .tratamiento-item-acciones {
+        flex-direction: column;
     }
 }
